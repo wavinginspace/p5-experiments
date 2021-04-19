@@ -25,12 +25,32 @@
       margin-bottom: 0;
     }
 
+    span.no_selection {
+      user-select: none;
+      /* standard syntax */
+      -webkit-user-select: none;
+      /* webkit (safari, chrome) browsers */
+      -moz-user-select: none;
+      /* mozilla browsers */
+      -khtml-user-select: none;
+      /* webkit (konqueror) browsers */
+      -ms-user-select: none;
+      /* IE10+ */
+    }
+
   </style>
 </head>
 
 <body>
   <h1>static generator</h1>
-  <p>move mouse to generate different patterns</p>
+  <p class="no_selection">move mouse to generate different patterns</p>
+  <script>
+    // prevent default double click selecting text
+    document.addEventListener('mousedown', function (event) {
+      if (event.detail > 1) {
+        event.preventDefault();
+      }
+    }, false);</script>
 </body>
 
 </html>
