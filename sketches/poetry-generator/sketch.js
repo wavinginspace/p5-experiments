@@ -1,5 +1,8 @@
 // Create the character level generator with a pre trained model
-const rnn = ml5.charRNN('../../m5/ml5-data-and-models-main/models/charRNN/bolano/', modelLoaded);
+const rnn = ml5.charRNN(
+  '../../m5/ml5-data-and-models-main/models/charRNN/bolano/',
+  modelLoaded
+);
 
 // When the model is loaded
 function modelLoaded() {
